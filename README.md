@@ -4,11 +4,11 @@
 Topik halaman saya: Koleksi komik favorit saya.
 
 - Judul halaman: Daftar Komik Saya
-- Deskripsi: Catatan koleksi komik favorit beserta volume dan formulir penambahan komik.
+- Deskripsi: Catatan koleksi komik favorit beserta Chapter dan penambahan komik.
 - Tautan navigasi: Daftar Komik, Tambah Komik, Tentang saya
 - Dua bagian utama: Daftar Komik, Tambah Komik
-- Kolom tabel: Judul Komik, Volume, Status
-- Kolom form: Judul Komik, Jumlah Volume, Tanggal Beli
+- Kolom tabel: Judul Komik, Chapter, Status
+- Kolom form: Judul Komik, Jumlah Chapter, Tanggal Beli
 - Gambar: komik.webp
 
 ## Catatan penggunaan AI
