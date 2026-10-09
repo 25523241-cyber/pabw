@@ -1,6 +1,20 @@
+
+body > * {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
 header {
-  padding-block: var(--space-4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-1);
+  padding-block: var(--space-4);
+  backdrop-filter: blur(8px);
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .header-baris {
@@ -13,46 +27,252 @@ header {
 
 nav ul {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-2);
   list-style: none;
   padding: 0;
 }
 
 nav a {
-  color: var(--color-primary);
-  text-decoration: none;
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  color: var(--color-fg-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background: var(--color-bg-subtle);
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 main {
   display: flex;
   flex-direction: column;
   gap: var(--section-gap);
-  padding-block: var(--space-6);
+  padding-block: var(--space-8);
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+section > h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+section > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-accent), transparent);
+  border-radius: var(--radius-full);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  font-size: var(--text-sm);
+}
+
+th, td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-th-bg);
+  font-weight: 600;
+  color: var(--color-primary);
+  width: 40%;
+}
+
+td {
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;
 }
 
 .katalog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-5);
 }
 
 .kartu {
-  flex: 1 1 16rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.kartu:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-3);
+}
+
+.kartu img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.kartu-konten {
   padding: var(--card-pad);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.kartu h3 {
+  color: var(--color-fg);
+}
+
+.kartu p {
+  font-size: var(--text-sm);
+  color: var(--color-fg-muted);
+  max-width: none;
 }
 
 footer {
-  margin-top: var(--space-6);
-  padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
-  color: var(--color-fg);
+  padding-block: var(--space-5);
+  text-align: center;
+  color: var(--color-fg-muted);
   font-size: var(--text-sm);
+}
+
+/* ===========================
+   PROFIL CARD
+   =========================== */
+
+.profil-kartu {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+  margin-top: var(--space-4);
+}
+
+/* Bagian atas: avatar + nama */
+.profil-avatar-area {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+.profil-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+}
+
+.profil-identitas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.profil-nama {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.profil-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #fff;
+  width: fit-content;
+  backdrop-filter: blur(4px);
+}
+
+/* Grid info bawah */
+.profil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0;
+}
+
+.profil-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition);
+}
+
+.profil-item:hover {
+  background: var(--color-bg-subtle);
+}
+
+/* Hapus border kanan pada item terakhir di setiap baris */
+.profil-item:last-child {
+  border-right: none;
+}
+
+.profil-ikon {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.profil-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-fg-muted);
+}
+
+.profil-nilai {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-fg);
+  line-height: 1.4;
 }

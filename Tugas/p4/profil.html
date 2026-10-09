@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Saya - Muhammad Zulfahmi Radityo</title>
+  <meta name="description" content="Halaman profil Muhammad Zulfahmi Radityo - Mahasiswa SIF302 Pengembangan Aplikasi Berbasis Web.">
+  <title>Daftar komik saya</title>
 
-  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="token.css">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="komponen.css">
@@ -15,7 +16,7 @@
 
   <header>
     <div class="header-baris">
-      <h1>Muhammad Zulfahmi Radityo</h1>
+      <h1>Daftar komik saya</h1>
 
       <input type="checkbox" id="tema" class="pengalih-tema">
       <label for="tema" class="tombol-tema">Tema Gelap</label>
@@ -31,54 +32,77 @@
   </header>
 
   <main>
+
     <section id="profil">
       <h2>Biodata Mahasiswa</h2>
-      <p>Berikut adalah informasi profil diri dan akademis saya:</p>
+      <p>Informasi profil diri dan akademis saya.</p>
 
-      <table>
-        <tr>
-          <th>Nama</th>
-          <td>Muhammad Zulfahmi Radityo</td>
-        </tr>
-        <tr>
-          <th>NIM</th>
-          <td>25523241</td>
-        </tr>
-        <tr>
-          <th>Kelas</th>
-          <td>C</td>
-        </tr>
-        <tr>
-          <th>Mata Kuliah</th>
-          <td>Pengembangan Aplikasi Berbasis Web (SIF302)</td>
-        </tr>
-      </table>
+      <div class="profil-kartu">
+        <!-- Avatar & identitas utama -->
+        <div class="profil-avatar-area">
+          <div class="profil-avatar">MZR</div>
+          <div class="profil-identitas">
+            <span class="profil-nama">Muhammad Zulfahmi Radityo</span>
+            <span class="profil-badge">🎓 Mahasiswa Aktif</span>
+          </div>
+        </div>
+
+        <!-- Grid info -->
+        <div class="profil-grid">
+          <div class="profil-item">
+            <span class="profil-ikon">👤</span>
+            <span class="profil-label">Nama Lengkap</span>
+            <span class="profil-nilai">Muhammad Zulfahmi Radityo</span>
+          </div>
+          <div class="profil-item">
+            <span class="profil-ikon">🪪</span>
+            <span class="profil-label">NIM</span>
+            <span class="profil-nilai">25523241</span>
+          </div>
+          <div class="profil-item">
+            <span class="profil-ikon">🏛️</span>
+            <span class="profil-label">Kelas</span>
+            <span class="profil-nilai">C</span>
+          </div>
+          <div class="profil-item">
+            <span class="profil-ikon">📚</span>
+            <span class="profil-label">Mata Kuliah</span>
+            <span class="profil-nilai">Pengembangan Aplikasi Berbasis Web (SIF302)</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="katalog">
       <h2>Katalog Komik</h2>
       <div class="katalog">
         <div class="kartu">
-          <img src="komik-1.webp" alt="Komik 1">
-          <h3>Komik Bagian 1</h3>
-          <p>One piece.</p>
+          <img src="komik-1.webp" alt="Cover komik One Piece">
+          <div class="kartu-konten">
+            <h3>Komik Bagian 1</h3>
+            <p>One Piece.</p>
+          </div>
         </div>
         <div class="kartu">
-          <img src="komik-2.webp" alt="Komik 2">
-          <h3>Komik Bagian 2</h3>
-          <p>Koleksi komik The Umbeatable Dungeon's Lazy Boss.</p>
+          <img src="komik-2.webp" alt="Cover komik The Unbeatable Dungeon's Lazy Boss">
+          <div class="kartu-konten">
+            <h3>Komik Bagian 2</h3>
+            <p>Koleksi komik The Unbeatable Dungeon's Lazy Boss.</p>
+          </div>
         </div>
         <div class="kartu">
-          <img src="komik-3.webp" alt="Komik 3">
-          <h3>Komik Bagian 3</h3>
-          <p>Koleksi komik Evolutin Begins With A Big Tree.</p>
+          <img src="komik-3.webp" alt="Cover komik Evolution Begins With A Big Tree">
+          <div class="kartu-konten">
+            <h3>Komik Bagian 3</h3>
+            <p>Koleksi komik Evolution Begins With A Big Tree.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="kontak">
       <h2>Form Kontak</h2>
-      <form action="#" method="post">
+      <form action="#" method="post" novalidate>
         <div class="form-kolom">
           <label for="nama">Nama Lengkap</label>
           <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
@@ -109,10 +133,11 @@
         <button type="submit">Kirim Pesan</button>
       </form>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2026 Muhammad Zulfahmi Radityo - SIF302 Pengembangan Aplikasi Berbasis Web</p>
+    <p>&copy; 2026 Muhammad Zulfahmi Radityo &mdash; SIF302 Pengembangan Aplikasi Berbasis Web</p>
   </footer>
 
 </body>
