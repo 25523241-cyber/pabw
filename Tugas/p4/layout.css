@@ -163,10 +163,6 @@ footer {
   font-size: var(--text-sm);
 }
 
-/* ===========================
-   PROFIL CARD
-   =========================== */
-
 .profil-kartu {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -176,7 +172,6 @@ footer {
   margin-top: var(--space-4);
 }
 
-/* Bagian atas: avatar + nama */
 .profil-avatar-area {
   display: flex;
   align-items: center;
@@ -230,7 +225,6 @@ footer {
   backdrop-filter: blur(4px);
 }
 
-/* Grid info bawah */
 .profil-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -251,7 +245,6 @@ footer {
   background: var(--color-bg-subtle);
 }
 
-/* Hapus border kanan pada item terakhir di setiap baris */
 .profil-item:last-child {
   border-right: none;
 }
