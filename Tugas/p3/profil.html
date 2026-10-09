@@ -3,109 +3,127 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daftar Komik Saya — Muhammad Zulfahmi Radityo</title>
+  <meta name="description" content="Halaman profil Muhammad Zulfahmi Radityo - Mahasiswa SIF302 Pengembangan Aplikasi Berbasis Web.">
+  <title>Daftar komik saya</title>
 </head>
 <body>
 
   <header>
-    <h1>Daftar Komik Saya</h1>
-    <nav aria-label="Navigasi utama">
+    <h1>Daftar komik saya</h1>
+    <nav>
       <ul>
-        <li><a href="#daftar-komik">Daftar Komik</a></li>
-        <li><a href="#tambah-komik">Tambah Komik</a></li>
-        <li><a href="#tentang-saya">Tentang Saya</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#katalog">Katalog</a></li>
+        <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Section 1: Tabel Data & Gambar -->
-    <section id="daftar-komik">
-      <h2>Koleksi Komik Favorit</h2>
-      
-      <table>
-        <caption>Daftar koleksi komik favorit beserta jumlah chapter dan status bacanya</caption>
-        <thead>
-          <tr>
-            <th scope="col">Judul Komik</th>
-            <th scope="col">Jumlah Chapter</th>
-            <th scope="col">Status Baca</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="row">One Piece</td>
-            <td>108</td>
-            <td>Sedang dibaca</td>
-          </tr>
-          <tr>
-            <td scope="row">The Umbeatable Dungeon's Lazy Boss</td>
-            <td>72</td>
-            <td>Sedang dibaca</td>
-          </tr>
-          <tr>
-            <td scope="row">Evolutin Begins With A Big Tree</td>
-            <td>26</td>
-            <td>Sedang dibaca</td>
-          </tr>
-        </tbody>
-      </table>
 
-      <!-- Gambar 1 -->
-      <figure>
-        <img src="komik-1.webp" 
-             alt="Tumpukan komik manga One Piece bersampul warna-warni tersusun di atas rak" 
-             width="250" 
-             height="250" 
-             loading="lazy">
-        <figcaption>Koleksi komik One Piece.</figcaption>
-      </figure>
+    <section id="profil">
+      <h2>Biodata Mahasiswa</h2>
+      <p>Informasi profil diri dan akademis saya.</p>
 
-      <!-- Gambar 2 -->
-      <figure>
-        <img src="komik-2.webp" 
-             alt="Komik The Umbeatable Dungeon's Lazy Boss volume lengkap tersusun rapi di lemari buku" 
-             width="250" 
-             height="250" 
-             loading="lazy">
-        <figcaption>Koleksi komik The Umbeatable Dungeon's Lazy Boss.</figcaption>
-      </figure>
+      <div>
+        <div>
+          <div>MZR</div>
+          <div>
+            <span>Muhammad Zulfahmi Radityo</span>
+            <span>🎓 Mahasiswa Aktif</span>
+          </div>
+        </div>
 
-      <!-- Gambar 3 -->
-      <figure>
-        <img src="komik-3.webp" 
-             alt="Beberapa komik Evolutin Begins With A Big Tree diletakkan di atas meja belajar" 
-             width="250" 
-             height="250" 
-             loading="lazy">
-        <figcaption>Koleksi komik Evolutin Begins With A Big Tree.</figcaption>
-      </figure>
+        <div>
+          <div>
+            <span>👤</span>
+            <span>Nama Lengkap</span>
+            <span>Muhammad Zulfahmi Radityo</span>
+          </div>
+          <div>
+            <span>🪪</span>
+            <span>NIM</span>
+            <span>25523241</span>
+          </div>
+          <div>
+            <span>🏛️</span>
+            <span>Kelas</span>
+            <span>C</span>
+          </div>
+          <div>
+            <span>📚</span>
+            <span>Mata Kuliah</span>
+            <span>Pengembangan Aplikasi Berbasis Web (SIF302)</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Section 2: Form Input -->
-    <section id="tambah-komik">
-      <h2>Tambah Komik Baru</h2>
+    <section id="katalog">
+      <h2>Katalog Komik</h2>
+      <div>
+        <div>
+          <img src="komik-1.webp" alt="Cover komik One Piece" width="250" height="250" loading="lazy">
+          <div>
+            <h3>Komik Bagian 1</h3>
+            <p>One Piece.</p>
+          </div>
+        </div>
+        <div>
+          <img src="komik-2.webp" alt="Cover komik The Unbeatable Dungeon's Lazy Boss" width="250" height="250" loading="lazy">
+          <div>
+            <h3>Komik Bagian 2</h3>
+            <p>Koleksi komik The Unbeatable Dungeon's Lazy Boss.</p>
+          </div>
+        </div>
+        <div>
+          <img src="komik-3.webp" alt="Cover komik Evolution Begins With A Big Tree" width="250" height="250" loading="lazy">
+          <div>
+            <h3>Komik Bagian 3</h3>
+            <p>Koleksi komik Evolution Begins With A Big Tree.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <form action="/simpan" method="post">
-        <p>
-          <label for="judul">Judul Komik</label>
-          <input type="text" id="judul" name="judul" required>
-        </p>
-        <p>
-          <label for="Chapter">Jumlah Chapter</label>
-          <input type="number" id="Chapter" name="Chapter" min="1" required>
-        </p>
-        <p>
-          <label for="tanggal">Tanggal Pembelian</label>
-          <input type="date" id="tanggal" name="tanggal" required>
-        </p>
-        <button type="submit">Simpan</button>
+    <section id="kontak">
+      <h2>Form Kontak</h2>
+      <form action="#" method="post" novalidate>
+        <div>
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+          <span>Nama wajib diisi.</span>
+        </div>
+
+        <div>
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+          <span>Masukkan alamat email yang valid.</span>
+        </div>
+
+        <div>
+          <label for="kategori">Kategori Pesan</label>
+          <select id="kategori" name="kategori">
+            <option value="umum">Umum</option>
+            <option value="pertanyaan">Pertanyaan</option>
+            <option value="saran">Saran</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+          <span>Pesan tidak boleh kosong.</span>
+        </div>
+
+        <button type="submit">Kirim Pesan</button>
       </form>
     </section>
+
   </main>
 
-  <footer id="tentang-saya">
-    <p>Muhammad Zulfahmi Radityo · 25523241 · 2026</p>
+  <footer>
+    <p>&copy; 2026 Muhammad Zulfahmi Radityo &mdash; SIF302 Pengembangan Aplikasi Berbasis Web</p>
   </footer>
 
 </body>
